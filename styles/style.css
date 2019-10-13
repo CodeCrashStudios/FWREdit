@@ -5,6 +5,7 @@
 }
 body{
     background: rgb(233, 233, 233);
+    font-family: 'Poppins', sans-serif;
 }
 canvas{
     margin: 10px;

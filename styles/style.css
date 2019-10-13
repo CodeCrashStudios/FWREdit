@@ -24,6 +24,9 @@ input{
 .inputBarCon{
     padding: 10px;
 }
+.worldname{
+    text-align: center;
+}
 .button{
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;

@@ -21,6 +21,7 @@ function loadFile() {
             var content = readerEvent.target.result; // this is the content!
             console.log(JSON.parse(content));
             world = JSON.parse(content);
+            document.getElementById("worldName").innerHTML = world.worldName;
         }
 
     }

@@ -11,7 +11,7 @@ var UI;
 // runs on page load
 function setup() {
     // creates the canvas object
-    createCanvas(windowHeight*0.8, windowHeight*0.8, WEBGL);
+    createCanvas(windowHeight*0.7, windowHeight*0.7, WEBGL);
     UI = createGraphics(width, width);
     // sets text type to center
     textAlign(CENTER);
@@ -52,7 +52,7 @@ function draw() {
 
 // resizes the canvas when the window is resized
 function windowResized() {
-    resizeCanvas(windowHeight*0.8, windowHeight*0.8);
+    resizeCanvas(windowHeight*0.7, windowHeight*0.7);
     UI = createGraphics(width, height);
     UI.textAlign(CENTER);
 }

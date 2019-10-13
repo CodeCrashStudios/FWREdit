@@ -9,7 +9,7 @@ var z = 5;
 // runs on page load
 function setup() {
     // creates the canvas object
-    createCanvas(windowHeight*0.8, windowHeight*0.8);
+    createCanvas(windowHeight*0.8, windowHeight*0.8, WEBGL);
     // sets text type to center
     textAlign(CENTER);
 }
@@ -37,9 +37,9 @@ function draw() {
         fill(0, 255, 0);
         ellipse(x+(world.player.spawnPosition.x*z), y+(world.player.spawnPosition.x*z), z, z);
         stroke(0, 0, 255);
-        line(x,0, x, height);
+        line(x,-height/2, x, height/2);
         stroke(255, 0, 0);
-        line(0, y, width, y);
+        line(-width/2, y, width/2, y);
     }
 
 

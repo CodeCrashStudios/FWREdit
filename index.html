@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FWREdit</title>
+
+    <script src="src/p5.js"></script>
+    <script src="src/p5.dom.js"></script>
+    <script src="src/p5.sound.js"></script>
+    <script src="src/loadWorld.js"></script>
+    <script src="src/saveWorld.js"></script>
+    <script src="src/main.js"></script>
+    
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="inputBar">
+        <div class="inputBarCon">
+            <input class="button" type="button" value="Open World" onclick="loadFile();" />
+            <input class="button" type="button" value="Save World" id="a" onclick="downloadFile();"/>
+            <a href="https://github.com/CodeCrashStudios/powerboxstudios">
+                <input class="buttonGit" type="button" value="GitHub" />
+             </a>
+        </div>
+    </div>
+    <input class="buttonFull" type="image" src="resources/full-size.svg" onclick="toggleFullScreen();" width="50" height="50"/>
+</body>
+
+</html>

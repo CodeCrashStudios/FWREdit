@@ -12,6 +12,7 @@ function setup() {
     createCanvas(windowHeight*0.8, windowHeight*0.8, WEBGL);
     // sets text type to center
     textAlign(CENTER);
+    smooth(4);
 }
 
 // runs every frame

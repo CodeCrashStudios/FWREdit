@@ -18,7 +18,6 @@ function setup() {
 function draw() {
 
     // checks if world has been loaded
-    console.log(world);
     if(world == 0){
 
         // draws this when no world is loaded
@@ -35,7 +34,14 @@ function draw() {
             fill(255-(world.items[i].position.y*10), 0, 0);
             ellipse(x+(world.items[i].position.x*z), y+(world.items[i].position.z*z),z,z);
         }
+        fill(0, 255, 0);
+        ellipse(x+(world.player.spawnPosition.x*z), y+(world.player.spawnPosition.x*z), z, z);
+        stroke(0, 0, 255);
+        line(x,0, x, height);
+        stroke(255, 0, 0);
+        line(0, y, width, y);
     }
+
 
     // runs input handler
     inputHandler();

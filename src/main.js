@@ -6,26 +6,29 @@ var x = 0;
 var y = 0;
 var z = 5;
 
+//UI Object
+var UI;
 // runs on page load
 function setup() {
     // creates the canvas object
     createCanvas(windowHeight*0.8, windowHeight*0.8, WEBGL);
+    UI = createGraphics(width, width);
     // sets text type to center
     textAlign(CENTER);
     smooth(4);
+    UI.textAlign(CENTER);
 }
 
 // runs every frame
 function draw() {
-
     // checks if world has been loaded
     if(world == 0){
-
-        // draws this when no world is loaded
         background(0);
-        fill(255);
-        textSize(width*0.1);
-        text("No World Loaded", width/2, height/2);
+        // draws this when no world is loaded
+        UI.clear();
+        UI.fill(255);
+        UI.textSize(width*0.1);
+        UI.text("No World Loaded", width/2, height/2);
     }else{
 
         // renders world when one is present
@@ -42,8 +45,7 @@ function draw() {
         stroke(255, 0, 0);
         line(-width/2, y, width/2, y);
     }
-
-
+    image(UI, -width/2, -height/2, width, height);
     // runs input handler
     inputHandler();
 }
@@ -51,6 +53,8 @@ function draw() {
 // resizes the canvas when the window is resized
 function windowResized() {
     resizeCanvas(windowHeight*0.8, windowHeight*0.8);
+    UI = createGraphics(width, height);
+    UI.textAlign(CENTER);
 }
 
 // runs when the fullscreen button is pressed

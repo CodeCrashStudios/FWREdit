@@ -21,11 +21,11 @@ function setup() {
 
 // runs every frame
 function draw() {
+    UI.clear();
     // checks if world has been loaded
     if(world == 0){
         background(0);
         // draws this when no world is loaded
-        UI.clear();
         UI.fill(255);
         UI.textSize(width*0.1);
         UI.text("No World Loaded", width/2, height/2);

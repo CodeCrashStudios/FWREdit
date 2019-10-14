@@ -22,6 +22,8 @@ function loadFile() {
             console.log(JSON.parse(content));
             world = JSON.parse(content);
             document.getElementById("worldName").innerHTML = world.worldName;
+            document.getElementById("itemAmount").innerHTML = "Items: "+world.items.length;
+            document.getElementById("spawnPos").innerHTML = "Spawn Position: "+world.player.spawnPosition.x+", "+world.player.spawnPosition.y+", "+world.player.spawnPosition.z;
         }
 
     }

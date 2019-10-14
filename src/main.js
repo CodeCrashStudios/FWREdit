@@ -11,7 +11,8 @@ var UI;
 // runs on page load
 function setup() {
     // creates the canvas object
-    createCanvas(windowHeight*0.7, windowHeight*0.7, WEBGL);
+    var canvas = createCanvas(windowHeight*0.7, windowHeight*0.7, WEBGL);
+    canvas.parent('sketch');
     UI = createGraphics(width, width);
     // sets text type to center
     textAlign(CENTER);
@@ -39,7 +40,7 @@ function draw() {
             ellipse(x+(world.items[i].position.x*z), y+(world.items[i].position.z*z),z,z);
         }
         fill(0, 255, 0);
-        ellipse(x+(world.player.spawnPosition.x*z), y+(world.player.spawnPosition.x*z), z, z);
+        ellipse(x+(world.player.spawnPosition.x*z), y+(world.player.spawnPosition.z*z), z, z);
         stroke(0, 0, 255);
         line(x,-height/2, x, height/2);
         stroke(255, 0, 0);

@@ -14,7 +14,7 @@
     <script src="src/loadWorld.js"></script>
     <script src="src/saveWorld.js"></script>
     <script src="src/main.js"></script>
-    
+
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -22,21 +22,24 @@
     <div class="inputBar">
         <div class="inputBarCon">
             <input class="button" type="button" value="Open World" onclick="loadFile();" />
-            <input class="button" type="button" value="Save World" id="a" onclick="downloadFile();"/>
+            <input class="button" type="button" value="Save World" id="a" onclick="downloadFile();" />
             <a href="https://github.com/CodeCrashStudios/FWREdit">
                 <input class="buttonGit" type="button" value="GitHub" />
-             </a>
+            </a>
         </div>
     </div>
     <div class="worldname" id="worldName">No World Selected...</div>
-    <input class="buttonFull" type="image" src="resources/full-size.svg" onclick="toggleFullScreen();" width="50" height="50"/>
+    <input class="buttonFull" type="image" src="resources/full-size.svg" onclick="toggleFullScreen();" width="50"
+        height="50" />
     <div class="worldInfo">
         <div class="sketch" id="sketch"></div>
-        <div class="items" id="itemAmount">
-            Items: 0
-        </div>
-        <div class="items" id="spawnPos">
+        <div class="itemsCon">
+            <div class="items" id="itemAmount">
+                Items: 0
+            </div>
+            <div class="items" id="spawnPos">
                 Spawn Position: ...
+            </div>
         </div>
     </div>
 </body>

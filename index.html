@@ -22,7 +22,7 @@
     <div class="inputBar">
         <div class="inputBarCon">
             <input class="button" type="button" value="Open World" onclick="loadFile();" />
-            <input class="button" type="button" value="Save World" id="a" onclick="download(world.worldName+'.fwr',JSON.stringify(world));" />
+            <input class="button" type="button" value="Save World" id="a" onclick="download(world.worldName.replace(' ','_')+'.fwr',JSON.stringify(world));" />
             <a href="https://github.com/CodeCrashStudios/FWREdit">
                 <input class="buttonGit" type="button" value="GitHub" />
             </a>

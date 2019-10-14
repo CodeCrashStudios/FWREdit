@@ -1,8 +1,18 @@
 
-// runs when the save world button is pressed. CURRENTLY DOESN'T WORK
-function downloadFile() {
-    var a = document.getElementById("a");
-    var file = new Blob(world, {type: "text/plain"});
-    a.href = URL.createObjectURL(file);
-    a.download = "name.fwr";
+// runs when the save world button is pressed
+function download(filename, text) {
+    //creates an element to attach file to
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
 }
+
+// Start file download.
+download("hello.txt", "This is the content of my file :)");

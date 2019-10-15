@@ -79,10 +79,10 @@ function inputHandler(){
         x -= 5;
     }
     if(keyIsDown(81)){
-        z -= .05*z;
+        z -= .5/z;
     }
     if(keyIsDown(69)){
-        z += .05*z; // Do these work? -Whip
+        z += .5/z; // Do these work? (original value is 0.05) -Whip
     }
     if(z < 0) z = 0;
 }

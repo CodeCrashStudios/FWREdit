@@ -1,7 +1,7 @@
 // the global world object
 var world = 0;
 
-// veiw cordinates
+// view cordinates
 var x = 0;
 var y = 0;
 var z = 5;
@@ -64,7 +64,7 @@ function toggleFullScreen(){
     fullscreen(!fs);
 }
 
-// handles inputs
+// handles inputs  -- No shit mate -Whip
 function inputHandler(){
     if(keyIsDown(87)){
         y += 5;
@@ -79,10 +79,10 @@ function inputHandler(){
         x -= 5;
     }
     if(keyIsDown(81)){
-        z -= .05;
+        z -= .05/z;
     }
     if(keyIsDown(69)){
-        z += .05;
+        z += .05/z; // Do these work? -Whip
     }
     if(z < 0) z = 0;
 }

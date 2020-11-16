@@ -1,6 +1,6 @@
 # FWREdit
 <p align="left">
-<img src="https://img.shields.io/badge/State-WIP-red">
+<img src="https://img.shields.io/maintenance/no/2019">
 </p>
 
 This is a tool for editing worlds from the popular game Fun With Ragdolls: The Game.
